@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $1 = "--version" ]; then 
+	echo "BondCalc 1.0"
+	exit 1
+fi
+
+if [ $1 = "-h" ]; then 
+
+

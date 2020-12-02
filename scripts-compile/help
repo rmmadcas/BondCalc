@@ -1,0 +1,19 @@
+ echo " " ; echo " ======================================================" ; echo " "
+ echo " This script take the results of bonds between 1 or 2 trajectories in pdb files
+
+ SYNOPSIS
+        zrun_BondCalc.scp movie1.pdb movie2.pdb[optional]
+    
+ OPTIONS
+
+       -r,         Remove the extra files which only contains details.
+
+       -h,         Print help and quit.
+
+       --version,  Print version of the code.
+
+ AUTHOR
+       Script developed by R.M. Madero-Castro
+ "
+ echo " " ; echo " ======================================================" ; echo " "
+

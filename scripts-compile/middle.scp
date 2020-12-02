@@ -1,0 +1,55 @@
+
+	exit 1
+fi 
+
+
+
+if [ $1 = "-r" ]; then 
+	rm -f nBpermolec* Av* AVG-nBpermolec* All-bonds* nohup.out data_bonds*dat
+        if [ -f timelife*.dat ]; then
+	        rm timelife*.dat fit.log*
+        fi      
+	echo "Extra Files Removed" ; exit 1 
+fi
+
+rm -f input-fortran out-cl* out-fi* dispersion.dat
+
+if [ ! -f "BondCalc.input" ]; then echo "BondCalc.input file not found" ; exit 1 ; fi
+
+if [ -d "SDF/" ]; then rm -r SDF ; fi
+if [ -d "Clusters/" ]; then rm -r Clusters ; fi
+if [ -d "timelife/" ]; then rm -r timelife ; fi
+
+grep "PDBNumbers " BondCalc.input |grep -v "#"| awk '{print $2}' > input-fortran
+num=$(grep "PDBNumbers " BondCalc.input |grep -v "#"| awk '{print $2}' )
+grep "TypeOfMolecule" BondCalc.input |grep -v "#"| awk '{print $3}' >> input-fortran
+gene=$(grep "TypeOfMolecule" BondCalc.input |grep -v "#"| awk '{print $3}'| head -1)
+if [ "$gene" == "generic" ]; then
+        grep "NumMol" BondCalc.input |grep -v "#"| awk '{print $3}' >> input-fortran
+fi
+type_list=$(grep "TypeOfMolecule" BondCalc.input |grep -v "#"| awk '{print $3}')
+grep "CalculateLifeTime" BondCalc.input |grep -v "#"| awk '{print $2}' >> input-fortran
+grep "CalculateClusters" BondCalc.input |grep -v "#"| awk '{print $2}' >> input-fortran
+grep "CalculateSDF" BondCalc.input |grep -v "#"| awk '{print $2}' >> input-fortran
+grep "CRYST" $1 | awk '{print $2,$3,$4}' > cell_parameters.dat
+
+
+
+numbers=$(grep "PDBNumbers " BondCalc.input | awk '{print $2}')
+i=1
+for arg in $@
+do
+	wc -l $arg | awk '{print $1}' >> input-fortran
+	grep -v "REMARK" $arg | grep -v "TER" | grep -v "TITLE" > movie$i.pdb
+	let i=$i+1
+done
+grep "MODEL" $1 | wc -l |awk '{print $1}' >> input-fortran
+
+if [ "$gene" == "generic" ]; then
+	grep "NewInteraction1" Generic_Interactions.def |grep -v "#"| wc -l | awk '{print $1}' >> input-fortran
+	grep "NewInteraction2" Generic_Interactions.def |grep -v "#"| wc -l | awk '{print $1}' >> input-fortran
+	grep "NewInteractionMix" Generic_Interactions.def |grep -v "#"| wc -l | awk '{print $1}' >> input-fortran
+fi
+rm -f nBpermolec* Av* AVG-nBpermolec* All-bonds* data_bonds*dat Ave_bonds*.dat SDF.pdb
+
+
