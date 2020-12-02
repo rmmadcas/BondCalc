@@ -1,0 +1,1 @@
+In this example we will find the average number of bonds per molecule in a generic molecule formed for one atom of N and three atoms of H (ammonia). We can compare the results with the pure sample of ammonia. The trajectory file is NH3.pdb

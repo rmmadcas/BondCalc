@@ -1,0 +1,1 @@
+In this example we will find the average number of hydrogen bonds per molecule in a sample of catechol. We consider this sample like a diol molecule, for that reason we need only the OH groups. catechol.pdb is the trajectory of all compound while OH.pdb is the input trajectory that we will introduce in the program.

@@ -1,0 +1,14 @@
+# DON'T MODIFY THE STRUCTURE OF THIS FILE
+#  Number of PDBs (1, 2)
+PDBNumbers         1
+# Kinds of molecules of PDB (water, alcohol, diol, ring, ammonia, generic)
+TypeOfMolecule  1       ring
+
+#CalculateLifeTime (yes, no)
+CalculateLifeTime        no
+
+#CalculateClusters (yes, no)
+CalculateClusters        yes
+
+#CalculateSDF (yes, no)
+CalculateSDF        yes
