@@ -1,0 +1,5 @@
+INTEGER::flag, maxi(nmovies)
+CALL counts_molecules(flag, maxi, "ring")
+CALL allocate_molecules(flag)
+CALL read_atoms_ring(flag,maxi)
+CALL create_vectors(flag, maxi)

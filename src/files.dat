@@ -1,0 +1,51 @@
+     11      movie1.pdb
+     12      movie2.pdb
+
+     16      cell_parameters.dat
+
+     17      All-bonds1.dat
+     18      All-bonds2.dat
+     19      All-bondsMix.dat
+
+     20      AVG-nBpermolec1.dat
+     21      AVG-nBpermolec2.dat
+     22      AVG-nBpermolecMix.dat
+
+     23      data_bonds1.dat
+     24      data_bonds2.dat
+     25      data_bondsMix.dat
+
+     26      Ave_bonds1.dat
+     27      Ave_bonds2.dat
+     28      Ave_bondsMix.dat
+
+     29      Generic_Interactions.input
+
+     30      Output_bonds.dat
+
+     31      timelife1.dat
+     32      timelife2.dat
+     33      timelifeMix.dat
+
+     51      Ave_bonds1.dat
+     52      Ave_bonds2.dat
+     53      Ave_bondsMix.dat
+
+     61      out-cluster-details1.dat
+     62      out-cluster-details2.dat
+     63      out-cluster-detailsMix.dat
+
+     71      out-cluster-summary1.dat
+     72      out-cluster-summary2.dat
+     73      out-cluster-summaryMix.dat
+
+     81      out-final-average1.dat
+     82      out-final-average2.dat
+     83      out-final-averageMix.dat
+
+     91      All-bonds1.dat
+     92      All-bonds2.dat
+     93      All-bondsMix.dat
+
+    100	     Reference_molecule.pdb
+    101      SDF.pdb
