@@ -1,0 +1,45 @@
+#Default Interacction (DO NOT MODIFY THE ORDER OF THE PARAMETERS)
+#PURES
+#water
+O       O	3.6	
+O       H	2.45
+#alcohol        
+O       O	3.5
+O       H	2.6
+#diol
+O       O	3.5
+O       H	2.6
+#ammonia
+N       N	5.0
+N       H	2.7
+#aromatic ring
+face    face	4.6
+face    edge	5.5
+#MIXTURE
+#water-alcohol
+O  	O	3.55
+O	H	2.525
+#water-ammonia
+O  	N	0.0	
+O-N  	H	0.0
+#water-diol
+O 	O	3.55
+O	H	2.525
+#alcohol-alcohol
+O	O	3.5
+O	H	2.6
+#alcohol-diol
+O	O	3.5
+O	H	2.6
+#alcohol-ammonia
+O	N	0.0
+O-N	H	0.0
+#diol-diol
+O	O	3.5
+O	H	2.6
+#diol-ammonia
+O	N	0.0
+O-N	H	0.0
+#aromatic-aromatic
+face	face	4.6
+face	edge	5.5

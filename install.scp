@@ -1,0 +1,33 @@
+#!/bin/bash
+if [ -f execute/BondCalc.exe ] ; then	
+	rm execute/BondCalc.exe
+fi
+
+gfortran src/main.f90 -o execute/BondCalc.exe
+
+ppwd=$(pwd)
+
+cp scripts-compile/first.scp zrun_BondCalc.scp
+
+cat $ppwd/scripts-compile/help >> zrun_BondCalc.scp
+
+cat scripts-compile/middle.scp >> zrun_BondCalc.scp
+
+
+echo "$ppwd/execute/BondCalc.exe < input-fortran" >> zrun_BondCalc.scp
+
+cat scripts-compile/last.scp >> zrun_BondCalc.scp
+if [ -f execute/BondCalc.exe ] ; then
+	echo -e "=================================================================="
+	echo -e ""
+	echo -e "                   Instalation Completed \U1F407                       "
+	echo -e ""
+	echo -e "=================================================================="
+else
+	echo -e "=================================================================="
+	echo -e ""
+	echo -e "        Something went wrong in the instalation process \U1F926   "
+	echo -e ""
+	echo -e "=================================================================="
+
+fi

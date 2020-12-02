@@ -1,0 +1,20 @@
+# DON'T MODIFY THE STRUCTURE OF THIS FILE
+#  Number of PDBs (1, 2)
+PDBNumbers         1
+# Kinds of molecules of PDB (water, alcohol, diol, ring, ammonia, generic)
+TypeOfMolecule  1       ammoni
+#TypeOfMolecule  1       generic
+
+#Number of molecules of generic molecules(Integer less or equal than 20). If your molecule is not a generic, please, ignore this part
+#NumMol		1	3
+#NumMol		2	2
+
+#CalculateLifeTime (yes, no)
+CalculateLifeTime        no
+
+#CalculateClusters (yes, no)
+CalculateClusters        no
+
+#CalculateSDF (yes, no) 
+CalculateSDF        yes
+

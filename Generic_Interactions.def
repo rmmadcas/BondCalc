@@ -1,0 +1,22 @@
+#Atom_i		Atom_j		CutOff			MAXIMUM OF 20 INTERACTIONS
+#Interactions between molecules of the first pdb
+NewInteraction1
+1		1		3.6
+1		2		2.45
+NewInteraction1
+1		1		3.6
+1		3		2.45
+#Interactions between molecules of the second pdb
+NewInteraction2
+1		1		3.6
+1		2		2.45
+NewInteraction2
+1		1		3.6
+1		3		2.45
+#Interactions between mixture of molecules
+NewInteractionMix
+1		1		3.6
+1		2		2.45
+NewInteractionMix
+1		1		3.6
+1		3		2.45
